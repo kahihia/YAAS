@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% load i18n %}
+
+{% block title %}{% trans "Login" %}{% endblock %}
+
+{% block content %}
+
+    <form method="post" action="/login/">
+        {% csrf_token %}
+        {% for field in form %}
+            {% if field.errors %}
+                {{ field.errors }}
+            {% elif form.errors %}
+                {% if field.name == "password" %}
+                    <p>Username or password incorrect, try again</p>
+                {% endif %}
+            {% endif %}
+            <label>{{ field.label }}</label>
+            {{ field }}
+            <br>
+        {% endfor %}
+        <button type="submit" value="Submit">{% trans "Login" %}</button>
+    </form>
+
+    <form method="get" action="/register/">
+        <p>{% trans "Don't have an account?" %}</p>
+        <button type="submit" value="Register">{% trans "Create here for free" %}</button>
+    </form>
+{%  endblock %}

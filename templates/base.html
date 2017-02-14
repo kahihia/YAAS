@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+{% load i18n %}
+<html>
+<style type= "text/css">
+    body {
+        color: #002;
+        background: #ddf;
+        margin:0;
+    }
+    h1 {
+        padding: 1em 1em;
+        background: #55A;
+        margin-left:0;
+        margin:0;
+    }
+    h2 {
+        color: #43A;
+        border-top: 1px dotted #fff;
+        margin-top: 2em
+    }
+    button {
+        background: #55A;
+        color: #fff;
+    }
+    #wrapper {
+        text-align: center;
+    }
+    #navigationBar {
+        background: #43A;
+        padding: 1em 1em;
+    }
+    #navigationBar a:link {
+        color:#fff;
+        padding: 0em 1em;
+        text-decoration: none;
+    }
+    #navigationBar a:visited {
+        color:#fff;
+    }
+    #navigationBar a:hover {
+        color:#66f;
+    }
+    #navigationBar a:active {
+        color:#00a;
+    }
+    #title_style {
+        font-size: x-large;
+        font-weight: bold;
+    }
+    li.error {
+        background: #f55
+    }
+    li.info {
+        background: #5f5
+    }
+
+</style>
+<body>
+<!-- center everything -->
+<div id="wrapper">
+<!-- display the header of the site -->
+<h1>{% trans "Yet Another Auction Site" %}</h1>
+
+    <!-- display the navigation bar and its links -->
+    <div id="navigationBar">
+        <a href="/index/">{% trans "Home" %}</a>
+        <!-- add new tabs here -->
+        <a href="/browse/">{% trans "Browse" %}</a>
+
+        <!-- change the toolbar depending on if the user is logged in or not -->
+        {% if user.is_authenticated %}
+            <a href="/create/">{% trans "Create Auction" %}</a>
+            <a href="/profile/">{{ user.username }}</a>
+            <a href="/logout/">{% trans "Logout" %}</a>
+        {% else %}
+            <a href="/login/">{% trans "Log in" %}</a>
+        {% endif %}
+
+        <a href="/language/">{% trans "Change Language" %}</a>
+        <a href="/currency/">{% trans "Change Currency" %}</a>
+    </div>
+
+    <!-- if there is an additional message added to the list, display it -->
+    {% if messages %}
+    <ul class="messages">
+        {% for message in messages %}
+        <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+        {% endfor %}
+    </ul>
+    {% endif %}
+
+    <div id="title_style">
+    <br>
+    {% block title %}
+    {% endblock %}
+    <br><br>
+    </div>
+
+    <!-- display the actual content of the site, this is added in the file that extends this base.html -->
+    {% block content %}
+    {% endblock %}
+</div>
+
+</body>
+</html>

@@ -1,0 +1,293 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-11-10 22:27+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: YAAS/settings.py:123
+msgid "English"
+msgstr "englanti"
+
+#: YAAS/settings.py:124
+msgid "Finnish"
+msgstr "suomi"
+
+#: YAASapp/forms.py:9
+msgid "Username"
+msgstr "Käyttäjätunnus"
+
+#: YAASapp/forms.py:10
+msgid "Email"
+msgstr "Sähköpostiosoite"
+
+#: YAASapp/forms.py:11
+msgid "Password"
+msgstr "Salasana"
+
+#: YAASapp/forms.py:12
+msgid "Password again"
+msgstr "Salasana uudelleen"
+
+#: YAASapp/forms.py:31
+msgid "Enter date in form dd.mm.yyy hh:mm"
+msgstr "Syötä päivämäärä muodossa pp.kk.vvvv tt:mm"
+
+#: YAASapp/views.py:36
+msgid "You must be logged in to use this feature."
+msgstr "Sinun täytyy olla kirjautuneena sisään käyttääksesi tätä toimintoa"
+
+#: YAASapp/views.py:51
+msgid "New passwords don't match"
+msgstr "Uudet salasanat eivät täsmää"
+
+#: YAASapp/views.py:71
+msgid "New User is created. Please Login"
+msgstr "Uusi käyttäjä luotu. Kirjaudu sisään"
+
+#: YAASapp/views.py:138
+msgid "New Auction has been saved"
+msgstr "Uusi huutokauppa tallennettu"
+
+#: YAASapp/views.py:191 YAASapp/views.py:207 YAASapp/views.py:251
+msgid "Your requested auction is not Active!!"
+msgstr "Hakemasi huutokauppa ei ole aktiivinen!!"
+
+#: YAASapp/views.py:204
+msgid "You can't edit an auction you're not selling."
+msgstr "Et voi muokata muiden huutokauppaa."
+
+#: YAASapp/views.py:214
+msgid "Description edited"
+msgstr "Kuvaus muutettu"
+
+#: YAASapp/views.py:233
+msgid "You can't bid on an auction you're selling."
+msgstr "Et voi tarjota esineestä, jota myyt"
+
+#: YAASapp/views.py:241
+msgid "You already have the highest bid, you can't bid higher!"
+msgstr "Sinulla on jo korkein tarjous, et voi tarjota enempää!"
+
+#: YAASapp/views.py:269
+msgid "The seller has changed description. Please bid again."
+msgstr "Myyjä on muuttanut kuvausta. Tee tarjous uudestaan."
+
+#: YAASapp/views.py:280
+msgid ""
+"You must have a . separator and no more than two decimals, example: '1.43'"
+msgstr ""
+"Syötä tarjous maksimissaan kahden desimaalin tarkkuudella ja käytä . "
+"erottimena"
+
+#: YAASapp/views.py:326
+msgid "bid registered"
+msgstr "tarjous rekisteröity"
+
+#: YAASapp/views.py:330
+msgid ""
+"The new bid must be at least 0.01 more than the current bid or minimum bid"
+msgstr ""
+"Uuden tarjouksen täytyy olla vähintään 0.01 suurempi kuin nykyinen tai "
+"minimitarjous"
+
+#: YAASapp/views.py:352
+msgid "Currency changed to: {}"
+msgstr "Valuutta muutettu: {}"
+
+#: templates/base.html:62
+msgid "Yet Another Auction Site"
+msgstr "Taas Toinen Huutokauppa Sivu"
+
+#: templates/base.html:66
+#, fuzzy
+#| msgid "Home Page"
+msgid "Home"
+msgstr "Kotisivu"
+
+#: templates/base.html:68
+msgid "Browse"
+msgstr "Selaa"
+
+#: templates/base.html:72
+msgid "Create Auction"
+msgstr "Luo Huutokauppa"
+
+#: templates/base.html:74
+msgid "Logout"
+msgstr "Kirjaudu Ulos"
+
+#: templates/base.html:76
+msgid "Log in"
+msgstr "Kirjaudu Sisään"
+
+#: templates/base.html:79 templates/change_language.html:4
+msgid "Change Language"
+msgstr "Muuta Kieltä"
+
+#: templates/base.html:80 templates/change_currency.html:4
+msgid "Change Currency"
+msgstr "Muuta Valuuttaa"
+
+#: templates/bid_auction.html:12 templates/browse_auction.html:21
+msgid "Bid"
+msgstr "Tarjoa"
+
+#: templates/bid_auction.html:15
+msgid "Description: "
+msgstr "Kuvaus: "
+
+#: templates/bid_auction.html:18 templates/browse.html:20
+msgid "Seller: "
+msgstr "Myyjä: "
+
+#: templates/bid_auction.html:21
+msgid "Minimum bid: "
+msgstr "Minimi tarjous: "
+
+#: templates/bid_auction.html:23 templates/browse_auction.html:34
+msgid "Current bid"
+msgstr "Nykyinen tarjous"
+
+#: templates/bid_auction.html:26
+msgid "Auction deadline"
+msgstr "Huutokaupan takaraja"
+
+#: templates/bid_auction.html:29
+msgid "Please note that you are bidding in currency"
+msgstr "Huomaathan, että tarjoat valuutassa"
+
+#: templates/browse.html:4
+msgid "Browse Auctions"
+msgstr "Selaa huutokauppoja"
+
+#: templates/browse.html:11
+msgid "Search for auctions"
+msgstr "Etsi huutokauppoja"
+
+#: templates/browse.html:21
+msgid "State: "
+msgstr "Tila: "
+
+#: templates/browse_auction.html:11
+msgid "Edit Description"
+msgstr "Muuta kuvausta"
+
+#: templates/browse_auction.html:16
+msgid "Ban"
+msgstr "Porttikiellä"
+
+#: templates/browse_auction.html:26
+msgid "Description"
+msgstr "Kuvaus"
+
+#: templates/browse_auction.html:29 templates/edit_auction.html:15
+msgid "Seller"
+msgstr "Myyjä"
+
+#: templates/browse_auction.html:32
+msgid "Minimum bid"
+msgstr "Minimi tarjous"
+
+#: templates/browse_auction.html:37 templates/edit_auction.html:19
+msgid "Auction closes"
+msgstr "Huutokauppa sulkeutuu"
+
+#: templates/browse_auction.html:40
+msgid "Prices shown in"
+msgstr "Hinnat näytetään valuutassa"
+
+#: templates/confirmation.html:4
+msgid "Are you sure you want to add the Auction?"
+msgstr "Oletko varma, että haluat lisätä tämän huutokaupan"
+
+#: templates/confirmation.html:13
+msgid "Title: "
+msgstr "Otsikko: "
+
+#: templates/confirmation.html:23
+msgid "Yes"
+msgstr "Kyllä"
+
+#: templates/confirmation.html:27
+msgid "No"
+msgstr "Ei"
+
+#: templates/create_auction.html:4
+msgid "Create new Auction"
+msgstr "Luo uusi tarjous"
+
+#: templates/create_auction.html:15
+msgid "Create"
+msgstr "Luo"
+
+#: templates/create_auction.html:17
+msgid "Please note that you are using currency"
+msgstr "Huomaathan, että käytät valuuttaa"
+
+#: templates/edit_auction.html:4
+msgid "Edit auction "
+msgstr "Muuta kuvausta"
+
+#: templates/edit_auction.html:12
+msgid "Save"
+msgstr "Tallenna"
+
+#: templates/index.html:4
+msgid "Home Page"
+msgstr "Kotisivu"
+
+#: templates/index.html:8
+msgid "logged in as "
+msgstr "kirjautuneena sisään käyttäjänimellä "
+
+#: templates/registration/login.html:4 templates/registration/login.html:22
+msgid "Login"
+msgstr "Kirjaudu sisään"
+
+#: templates/registration/login.html:26
+msgid "Don't have an account?"
+msgstr "Eikö sinulla ole vielä tiliä?"
+
+#: templates/registration/login.html:27
+msgid "Create here for free"
+msgstr "Luo tästä ilmaiseksi"
+
+#: templates/registration/register.html:4
+msgid "Create user"
+msgstr "Luo käyttäjä"
+
+#: templates/registration/register.html:11
+msgid "Register"
+msgstr "Rekisteröidy"
+
+#: templates/view_profile.html:4
+msgid "'s profile"
+msgstr ":n profiili"
+
+#: templates/view_profile.html:18
+msgid "Change Email"
+msgstr "Muuta sähköpostiosoitetta"
+
+#: templates/view_profile.html:35
+msgid "Change Password"
+msgstr "Muuta salasana"
+
+#~ msgid "Hello World!"
+#~ msgstr "Hei Maailma!"
+
+#~ msgid "Submit"
+#~ msgstr "Lähetä"

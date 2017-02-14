@@ -1,0 +1,41 @@
+{%  extends "base.html" %}
+{% load i18n %}
+
+{% block title %}{{ auction.title }}{% endblock %}
+
+{% block content %}
+
+    {% if user.username == auction.seller %}
+        <!-- if the user is seller -->
+        <a href="/edit/{{ auction.id }}/">
+            <button>{% trans "Edit Description" %}</button>
+        </a>
+    {% elif user.is_superuser %}
+        <!-- if the user is logged in but not seller -->
+        <a href="/ban/{{ auction.id }}/">
+            <button>{% trans "Ban" %}</button>
+        </a>
+    {% elif user.is_authenticated %}
+        <!-- if the user is logged in but not seller -->
+        <a href="/bid/{{ auction.id }}/">
+            <button>{% trans "Bid" %}</button>
+        </a>
+    {%  endif %}
+    <!-- if the user is not logged in, don't display any links -->
+
+    <h3>{% trans "Description" %}</h3>
+    <p>{{ auction.description }}</p>
+    <hr>
+    <h3>{% trans "Seller" %}</h3>
+    <p>{{ auction.seller }}</p>
+    <hr>
+    <h3>{% trans "Minimum bid" %}</h3>
+    <p>{{ exchanged_min_price }}</p>
+    <h3>{% trans "Current bid" %}</h3>
+    <p>{{ highest_bid.bidder.username }}: {{ exchanged_highest_bid }}</p>
+    <hr>
+    <h3>{% trans "Auction closes" %}</h3>
+    <p>{{ auction.deadline }}</p>
+    <hr>
+    <p>{% trans "Prices shown in" %} {{ currency }}</p>
+{%  endblock %}

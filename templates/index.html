@@ -1,0 +1,10 @@
+{%  extends "base.html" %}
+{% load i18n %}
+
+{% block title %}{% trans "Home Page" %}{% endblock %}
+
+{% block content %}
+    {% if user.is_authenticated %}
+        <p>{% trans "logged in as "%}{{ user.username }}</p>
+    {% endif %}
+{%  endblock %}

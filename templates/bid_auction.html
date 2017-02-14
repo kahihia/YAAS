@@ -1,0 +1,30 @@
+{%  extends "base.html" %}
+{% load i18n %}
+
+{% block title %}{{ auction.title }}{% endblock %}
+
+{% block content %}
+
+    <form method="post" action="/bid/{{ auction.id }}/">
+        {% csrf_token %}
+        <input type="number" name="new_bid" value="{{ auction.current_bid }}" step="0.01">
+        <input type="hidden" name="old_description" value="{{ auction.description }}">
+        <button type="submit" name="submit" value="Submit">{% trans "Bid" %}</button>
+    </form>
+
+    <h3>{% trans "Description: " %}</h3>
+    <p>{{ auction.description }}</p>
+    <hr>
+    <h3>{% trans "Seller: " %}</h3>
+    <p>{{ auction.seller }}</p>
+    <hr>
+    <h3>{% trans "Minimum bid: " %}</h3>
+    <p>{{ exchanged_min_price }}</p>
+    <h3>{% trans "Current bid" %}</h3>
+    <p>{{ highest_bid.bidder }}: {{ exchanged_highest_bid }}</p>
+    <hr>
+    <h3>{% trans "Auction deadline" %}</h3>
+    <p>{{ auction.deadline }}</p>
+    <hr>
+    <p>{% trans "Please note that you are bidding in currency" %} {{ currency }}</p>
+{%  endblock %}

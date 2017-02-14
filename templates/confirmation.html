@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% load i18n %}
+
+{% block title %}{% trans "Are you sure you want to add the Auction?" %}{%  endblock %}
+
+
+{% block content %}
+
+{% if error %}
+  {{ error}}
+{% endif %}
+
+<b>{% trans "Title: " %}{{auction_title}}</b>
+
+    <form action="/saveauction/" method="post">
+        {% csrf_token %}
+
+        <input type="hidden" name="auction_title" value="{{ auction_title }}">
+        <input type="hidden" name="auction_description" value="{{ auction_description }}">
+        <input type="hidden" name="auction_minimum_price" value={{ auction_min_price }}>
+        <input type="hidden" name="auction_deadline" value={{ auction_deadline }}>
+
+        <button type="submit" value="yes">{% trans "Yes" %}</button>
+    </form>
+
+    <form action="/index/" method="get">
+        <button type="submit" value="no">{% trans "No" %}</button>
+    </form>
+
+
+{% endblock %}

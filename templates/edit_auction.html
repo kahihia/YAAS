@@ -1,0 +1,22 @@
+{%  extends "base.html" %}
+{% load i18n %}
+
+{% block title %}{% trans "Edit auction " %}{{ auction.title }}{% endblock %}
+
+{% block content %}
+
+    <h3>Description:</h3>
+    <form method="post" action="/edit/{{ auction.id }}/">
+        {% csrf_token %}
+        <input type="text" name="description" value="{{ auction.description }}">
+        <button type="submit" value="Submit">{% trans "Save" %}</button>
+    </form>
+    <hr>
+    <h3>{% trans "Seller" %}</h3>
+    <p>{{ auction.seller }}</p>
+    <hr>
+    <hr>
+    <h3>{% trans "Auction closes" %}</h3>
+    <p>{{ auction.deadline }}</p>
+    <hr>
+{%  endblock %}

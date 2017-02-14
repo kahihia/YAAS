@@ -1,0 +1,39 @@
+{%  extends "base.html" %}
+{% load i18n %}
+
+{% block title %}{{ user.username }}{% trans "'s profile" %}{% endblock %}
+
+{% block content %}
+
+    <!-- change email -->
+    <h2>Change Email address</h2>
+    <form action="" method="post">
+        {% csrf_token %}
+        <p> Old email: {{ user.email }}</p>
+        <label for="new_email">New Email: </label>
+        <input type="email" name="new_email" value="" id="new_email">
+        <br>
+
+        <input type="hidden" name="change_request" value="email">
+        <button type="submit" value="Change Email">{% trans "Change Email" %}</button>
+    </form>
+
+    <br><br><br>
+
+    <!-- change password -->
+    <h2>Change Password</h2>
+    <form action="" method="post">
+        {% csrf_token %}
+        <label for="new_password1">New Password: </label>
+        <input type="password" name="new_password1" value="" id="new_password1">
+        <br>
+        <label for="new_password2">New Password again: </label>
+        <input type="password" name="new_password2" value="" id="new_password2">
+        <br>
+
+        <input type="hidden" name="change_request" value="password">
+        <button type="submit" value="Change Password">{% trans "Change Password" %}</button>
+    </form>
+
+
+{%  endblock %}
