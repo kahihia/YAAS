@@ -1,7 +1,7 @@
 # YAAS
 Yet Another Auction Site
 
-This is a website project I made for the course Development of web applications and web services. It was built using python and the Django framework.
+This is a website project I made for the course Development of web applications and web services. It was built using python and the Django framework. The idea is the provide an auction site where people can register as users and auction their items to the highest bidder.
 
 Some features YAAS implements:
 - Register and log in as different users
@@ -12,6 +12,6 @@ Some features YAAS implements:
 - Bid on other users' auctions
 - Admins can ban auctions
 - The system automatically resolves auctions when their deadline hits
-- support for multiple languages
-- support for multiple concurrent sessions
-- support for currency exchange
+- Support for multiple languages
+- Support for multiple concurrent sessions
+- Support for currency exchange
